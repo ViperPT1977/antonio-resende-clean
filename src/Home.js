@@ -1,56 +1,23 @@
+// Portfolio Starter - V3.4
+// Author: Antonio Resende
+// Version: 3.4
+// Date: 2025-06-20
+// Description: React + Tailwind CSS portfolio site with categorized 3D renderings, contact info, and full gallery features
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const categories = [
-  {
-    title: 'Abstract',
-    image: '/categories/abstract.jpg',
-    description: 'Creative compositions exploring form, color, and light.'
-  },
-  {
-    title: 'Architectural',
-    image: '/categories/architectural.jpg',
-    description: 'Renderings of interiors, exteriors, and architectural concepts.'
-  },
-  {
-    title: 'Automation',
-    image: '/categories/automation.jpg',
-    description: 'Factory systems, robotics, and industrial automation concepts.'
-  },
-  {
-    title: 'CNC Machines',
-    image: '/categories/cnc.jpg',
-    description: '3D models and renderings of CNC machining equipment.'
-  },
-  {
-    title: 'Electronics',
-    image: '/categories/electronics.jpg',
-    description: 'Boards, enclosures, and product visualizations in electronics.'
-  },
-  {
-    title: 'Food & Drink Products',
-    image: '/categories/food.jpg',
-    description: 'Packaging, presentation, and photorealistic renderings of consumables.'
-  },
-  {
-    title: 'Jewelry',
-    image: '/categories/jewelry.jpg',
-    description: 'Detailed renderings of rings, pendants, and luxury accessories.'
-  },
-  {
-    title: 'Mechanical Parts',
-    image: '/categories/mechanical.jpg',
-    description: 'Precision mechanical components and technical renderings.'
-  },
-  {
-    title: 'Vehicles',
-    image: '/categories/vehicles.jpg',
-    description: 'From automotive components to full vehicle visualizations.'
-  },
-  {
-    title: 'Others',
-    image: '/categories/others.jpg',
-    description: 'Miscellaneous projects and experiments in 3D rendering.'
-  }
+  { title: 'Abstract', image: '/categories/abstract.jpg', description: 'Creative compositions exploring form, color, and light.' },
+  { title: 'Architectural', image: '/categories/architectural.jpg', description: 'Renderings of interiors, exteriors, and architectural concepts.' },
+  { title: 'Automation', image: '/categories/automation.jpg', description: 'Factory systems, robotics, and industrial automation concepts.' },
+  { title: 'CNC Machines', image: '/categories/cnc.jpg', description: '3D models and renderings of CNC machining equipment.' },
+  { title: 'Electronics', image: '/categories/electronics.jpg', description: 'Boards, enclosures, and product visualizations in electronics.' },
+  { title: 'Food & Drink Products', image: '/categories/food.jpg', description: 'Packaging, presentation, and photorealistic renderings of consumables.' },
+  { title: 'Jewelry', image: '/categories/jewelry.jpg', description: 'Detailed renderings of rings, pendants, and luxury accessories.' },
+  { title: 'Mechanical Parts', image: '/categories/mechanical.jpg', description: 'Precision mechanical components and technical renderings.' },
+  { title: 'Vehicles', image: '/categories/vehicles.jpg', description: 'From automotive components to full vehicle visualizations.' },
+  { title: 'Others', image: '/categories/others.jpg', description: 'Miscellaneous projects and experiments in 3D rendering.' }
 ];
 
 export default function Home() {
@@ -63,7 +30,7 @@ export default function Home() {
         </p>
       </header>
 
-      <section className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-24">
         {categories.map((cat, index) => (
           <a
             key={index}
@@ -82,6 +49,15 @@ export default function Home() {
           </a>
         ))}
       </section>
+
+      <footer className="text-center text-sm text-gray-400">
+        <div className="space-y-2">
+          <p>Email: <a href="mailto:amaralresende@gmail.com" className="text-white hover:underline">amaralresende@gmail.com</a></p>
+          <p>Phone/WhatsApp: <a href="https://wa.me/351935017007" className="text-white hover:underline" target="_blank" rel="noopener noreferrer">+351 935 017 007</a></p>
+          <p>Location: Ovar, Portugal</p>
+        </div>
+        <p className="mt-8">© 2025 Antonio Resende. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
